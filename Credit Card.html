@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tema 14</title>
+    <style>
+      .card1-style {
+        position: relative;
+        background-color: rgb(85, 188, 201);
+        border-radius: 20px;
+        box-shadow: 6px 6px 6px black;
+        position: relative;
+        margin-left: 20%;
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        height: 280px;
+        width: 420px;
+        backdrop-filter: blur(30px);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        padding: 20px 30px 30px 30px;
+        z-index: 1;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        font-family: "Poppins", sans-serif;
+        font-size: 30px;
+        font-weight: 300;
+        padding-left: 30px;
+        padding-bottom: 20px;
+        color: #ffffff;
+        width: 420px;
+        line-height: 1.5em;
+        text-align: left;
+      }
+
+      textarea:focus,
+      input:focus {
+        outline: none;
+      }
+
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+
+      body {
+        font-family: "Space Mono", monospace;
+        background-color: rgb(240, 244, 247);
+
+        margin: 0;
+      }
+
+      .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 280px;
+        width: 420px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.211);
+        backdrop-filter: blur(30px);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
+        padding: 20px 30px 30px 30px;
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      .logo {
+        height: 80px;
+        width: 100px;
+        margin-bottom: 20px;
+      }
+
+      .card-number {
+        font-size: 30px;
+        font-family: "Space Mono", monospace;
+        width: 100%;
+        height: 50px;
+        margin-bottom: 40px;
+      }
+
+      .card-number::placeholder {
+        color: #b5b5b5;
+        font-size: 30px;
+        font-family: "Space Mono", monospace;
+      }
+
+      input::placeholder {
+        color: #b5b5b5;
+        font-family: "Space Mono", monospace;
+      }
+
+      .name {
+        font-family: "Space Mono", monospace;
+        padding: 0px 80px 0px 0px;
+        margin-right: 40px;
+        width: 100px;
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+      }
+
+      .expiration-date {
+        font-family: "Space Mono", monospace;
+        padding: 0px 0px 0px 0px;
+        margin-right: 60px;
+        width: 80px;
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+      }
+
+      .ccv {
+        font-family: "Space Mono", monospace;
+        padding: 0px 0px 0px 0px;
+        margin-right: 0px;
+        width: 60px;
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+      }
+
+      input {
+        font-family: "Space Mono", monospace;
+        border: none;
+        font-size: 16px;
+        height: 26px;
+        color: #ffffff;
+        background: 0;
+        padding: 0;
+        width: 0;
+        border-bottom: 1px solid white;
+        color: white;
+      }
+
+      label {
+        color: white;
+        font-size: 15px;
+        font-weight:700;
+        font-family: "Space Mono", monospace;
+        pointer-events: none;
+        display: block;
+        padding-bottom: 2px;
+      }
+
+      .card-name {
+        color: white;
+        font-size: 16px;
+        height: 26px;
+        width: 160px;
+        border-bottom: 1px solid white;
+        color: white;
+      }
+
+      .container2 {
+        display: flex;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+      }
+      .card2 {
+        width: 100%;
+        background-color: rgb(240, 244, 247);
+        background: linear-gradient(-70deg, #202020, #000000);
+        padding: 50px 0;
+      }
+      .span-style{
+        background-color: rgb(255, 115, 0);
+        color: white;
+        font-weight: 900;
+        display: flex;
+        padding: 10px 10px;
+        position: relative;
+        right:50px;
+      }
+      .imgmoon{position: absolute;
+        display: flex;
+        width: 180px;
+        left: 310px;
+        bottom: 140px;
+       
+      }
+    </style>
+  </head>
+  <body>
+    <!--Card 1-->
+    <div class="card1-style">
+        <span class="span-style">CREDIT CARD DETAILS</span><br><br><br>
+        <img src="imagine/moon_flag.png" alt="moon drow" class="imgmoon"">
+      <div>
+        <label for="ccn">Card Number</label>
+        <input
+          type="text"
+          placeholder="1234 1234 1234 1234"
+          required
+          maxlength="16"
+          class="card-number"
+        />
+      </div>
+       <div class="container2">
+        <!-- Card Holder -->
+        <div class="name">
+          <label>Card Holder</label>
+          <input class="card-name" placeholder="Name" type="text" required />
+        </div>
+
+        <!-- Date -->
+        <div class="expiration-date">
+          <label>Exp. Date</label>
+          <input
+            class="card-name"
+            placeholder="10/25"
+            type="text"
+            maxlength="5"
+            required
+          />
+        </div>
+
+        <!-- Cvv -->
+        <div class="ccv">
+          <label>CCV</label>
+          <input
+            class="card-name"
+            placeholder="123"
+            type="text"
+            maxlength="3"
+            required
+          />
+        </div>
+        </div>
+      </div>
+      <br /><br />
+      <br />
+
+      <!-- Card 2  -->
+      <div class="card2">
+        <div class="container">
+          <!-- Card -->
+          <div class="card">
+            <img
+              class="logo"
+              src="https://pngimg.com/uploads/visa/visa_PNG31.png"
+              alt="logo visa"
+            />
+
+            <!-- Card Number -->
+            <label>Card Number</label>
+            <input
+              class="card-number"
+              placeholder="1234 1234 1234 1234"
+              type="text"
+              required
+              maxlength="16"
+            />
+
+            <div class="container2">
+              <!-- Card Holder -->
+              <div class="name">
+                <label>Card Holder</label>
+                <input
+                  class="card-name"
+                  placeholder="Name"
+                  type="text"
+                  required
+                />
+              </div>
+
+              <!-- Date -->
+              <div class="expiration-date">
+                <label>Exp. Date</label>
+                <input
+                  class="card-name"
+                  placeholder="10/25"
+                  type="text"
+                  maxlength="5"
+                  required
+                />
+              </div>
+
+              <!-- Cvv -->
+              <div class="ccv">
+                <label>CCV</label>
+                <input
+                  class="card-name"
+                  placeholder="123"
+                  type="text"
+                  maxlength="3"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
